@@ -1,4 +1,4 @@
-import Start from "./lezioni/1-useState/inizio/4-useState.object";
+import Start from "./lezioni/1-useState/inizio/3-useState-array";
 
 function App() {
   return (
