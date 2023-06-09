@@ -80,6 +80,9 @@ h6 {
   letter-spacing: var(--spacing);
 }
 
+.text-left{
+  text-align: left;
+}
 .item {
   width: var(--fixed-width);
   background-color: var(--clr-white);

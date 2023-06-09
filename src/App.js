@@ -1,4 +1,4 @@
-import Start from "./lezioni/1-useState/inizio/1-errore-base";
+import Start from "./lezioni/1-useState/inizio/4-useState.object";
 
 function App() {
   return (
