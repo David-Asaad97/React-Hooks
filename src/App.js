@@ -1,4 +1,4 @@
-import Start from "./lezioni/6-useReducer/finale/index";
+import Start from "./lezioni/11-React-Router/v6/inizio/index";
 
 function App() {
 

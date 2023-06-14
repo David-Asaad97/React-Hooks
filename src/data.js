@@ -28,7 +28,7 @@ export const datiIncompleti = [
     id: "attcvDDMikF6G2iNi",
     image: {
       url:
-        "https://dl.airtable.com/.attachments/14ac9e946e1a02eb9ce7d632c83f742f/4fd98e64/product-1.jpeg",
+        "https://recentistudi.it/wp-content/uploads/2016/08/recenti_studi_amber_heard-250x300.jpg",
     },
     nome: "divano bello",
     prezzo: 50.45,
@@ -37,7 +37,7 @@ export const datiIncompleti = [
     id: "attP2cUyxU35M1zbw",
     image: {
       url:
-        "https://dl.airtable.com/.attachments/f3450755e165557344f7d6433242431e/93533098/product-1.jpeg",
+        "https://c8.alamy.com/compit/mnfhmw/coral-castle-sedia-a-dondolo-e-coral-tavolo-di-pietra-i-recenti-proprietari-cementato-la-sedia-a-dondolo-in-posizione-per-presunti-problemi-di-sicurezza-mnfhmw.jpg",
     },
     name: "cosa carina",
     prezzo: 70.45,
@@ -46,8 +46,7 @@ export const datiIncompleti = [
     id: "attIieysyB9zQmQo9",
     image: {
       url:
-        "https://dl.airtable.com/.attachments/f292eaec4fea8a791b037c759ae559c9/2d5e34d5/product-4.jpeg",
-    },
+        "https://pictureserver.net/images/pic/06/a8/undef_src_sa_picid_771418_type_whitesh_image.jpg?ver=9"},
     nome: "cosa brutta",
     prezzo: 99.99,
   },

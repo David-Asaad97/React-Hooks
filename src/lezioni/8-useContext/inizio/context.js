@@ -1,38 +1,41 @@
-import React, { useState } from "react";
-import { data } from "../../../data";
+import React, { useContext, useState } from 'react';
+import { data } from '../../../data'
+
+const AppContext = React.createContext();
 
 const MainComponent = () => {
-  const [people, setPeople] = useState(data);
+    const [people, setPeople] = useState(data)
 
-  const removePeople = (id) => setPeople(people.filter((el) => el.id !== id));
-  return (
-    <div>
-      <h3>Passaggio di Proprietà a cascata </h3>
-      <Elenco people={people} removePeople={removePeople} />
-    </div>
-  );
+    const remuvePeople = (id) => setPeople(people.filter(el => el.id !== id))
+
+    return (
+
+        <AppContext.Provider value={{ people, remuvePeople }} >
+            <h2>createContext & useContext</h2>
+            <Elenco />
+        </AppContext.Provider>
+
+    );
 };
 
-const Elenco = ({ people, removePeople }) => {
-  return (
-    <div>
-      {people.map((el, index) => {
-        return <Persona key={index} {...el} removePeople={removePeople} />;
-      })}
+const Elenco = () => {
+    const { people } = useContext(AppContext);
+    return <div>
+        {people.map((el, i) => {
+            return <Persona key={el.id + i} {...el} />
+        })}
     </div>
-  );
-};
 
-const Persona = ({ id, name, removePeople }) => {
-  return (
-    <div className="item">
-      <h5> {name} </h5>
-      <button className="button delete-button" onClick={() => removePeople(id)}>
-        {" "}
-        x{" "}
-      </button>
-    </div>
-  );
-};
+}
+
+const Persona = ({ name, id }) => {
+
+    const { remuvePeople } = useContext(AppContext);
+
+    return <article className='item shadow'>
+        <h5>{name}</h5>
+        <button className='button delete-button' onClick={() => remuvePeople(id)}>X</button>
+    </article>
+}
 
 export default MainComponent;
