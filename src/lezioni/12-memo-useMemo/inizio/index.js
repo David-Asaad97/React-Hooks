@@ -1,10 +1,19 @@
 import React, { useMemo, useState } from "react";
-import useFetch from "../../9-custom-hooks/risultato/useFetch";
+import useFetch from "../../9-custom-hooks/inizio/useFetch";
 const url = "https://api.github.com/users";
-
+const trovaMaggiore = (array)=>{
+  return array.reduce((total,item) =>{
+    if(item.id > total){
+      total = item.id;
+    }
+    return total;
+  }, 0)
+}
 const Index = () => {
   const { data } = useFetch(url);
   const [contatore, setContatore] = useState(0);
+  useMemo(() => trovaMaggiore(data),[data]);
+
 
   return (
     <>
@@ -26,7 +35,8 @@ const Index = () => {
   );
 };
 
-const Elenco = ({ avatar_url: image, login: name }) => {
+const Elenco =React.memo (({ avatar_url: image, login: name }) => {
+  console.log('item');
   return (
     <article className="card bg-white my-3 shadow-sm">
       <img
@@ -38,6 +48,6 @@ const Elenco = ({ avatar_url: image, login: name }) => {
       <h4>{name}</h4>
     </article>
   );
-};
+})
 
 export default Index;
